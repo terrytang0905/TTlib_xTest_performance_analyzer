@@ -1,0 +1,91 @@
+2013-05-31 16:49:11,901 **************************************
+2013-05-31 16:49:11,902 * XTest - v1.3.0 [r${xtest.version}] *
+2013-05-31 16:49:11,902 **************************************
+2013-05-31 16:49:11,940 -- XDB Info --
+2013-05-31 16:49:11,940 Raw = xDB 10_3@2284710 (plain)
+2013-05-31 16:49:11,940 Version = unknown
+2013-05-31 16:49:11,940 Branch = xDB 10_3
+2013-05-31 16:49:11,940 Build = 2284710
+2013-05-31 16:49:11,940 Jar Type = plain
+2013-05-31 16:49:11,941 Starting Suite : LMPI Query Test Suite (3) [LMPIndexQueryPerf3]
+2013-05-31 16:49:11,941 -> Java Tmp Dir = /tmp
+2013-05-31 16:49:11,941 -- xTest parameters --
+2013-05-31 16:49:11,941  classnames.list = /home/tangz/Perforce/tangz_linuxworkspace/depot/Platform/tools/xTest/bin/ClassNames.txt
+2013-05-31 16:49:11,941  suite.params = bootstrap=/home/tangz/Software/xDB_10_3/xDB/data/XhiveDatabase.bootstrap
+2013-05-31 16:49:11,941  repeat.period = 0
+2013-05-31 16:49:11,941  log.out = STDOUT
+2013-05-31 16:49:11,941  suite = LMPIndexQueryPerf3
+2013-05-31 16:49:11,941  testdata.dir = data/TestData
+2013-05-31 16:49:11,941  repeat.count = 1
+2013-05-31 16:49:11,941  result.out = STDOUT
+2013-05-31 16:49:11,941  suite.lib = data/Suite
+2013-05-31 16:49:11,941  log.xml = true
+2013-05-31 16:49:11,941  query.lib = data/Query
+2013-05-31 16:49:11,941  user.ref.default = Administrator
+2013-05-31 16:49:11,941  xtest.home = /home/tangz/Perforce/tangz_linuxworkspace/depot/Platform/tools/xTest
+2013-05-31 16:49:11,941  log.level = INFO
+2013-05-31 16:49:11,941  log.properties = bin/log4j.properties
+2013-05-31 16:49:11,941  system.lib = data/System
+2013-05-31 16:49:11,941  system.ref.default = LB-MyDatabase
+2013-05-31 16:49:11,941  base.out = /home/tangz/git/tangzGitRepo/xProject/xTestPerformanceAnalyzer/data/xTestResult/LMPIndexQueryPerf3_10_3
+2013-05-31 16:49:11,941 -- Suite parameters --
+2013-05-31 16:49:11,941 Running with Suite parameters :
+2013-05-31 16:49:11,941  bootstrap = /home/tangz/Software/xDB_10_3/xDB/data/XhiveDatabase.bootstrap
+2013-05-31 16:49:11,941  nrRunIngest = 100000
+2013-05-31 16:49:11,941  batchSize = 100
+2013-05-31 16:49:11,941  nrRunQueries = 1000
+2013-05-31 16:49:11,941  LMPIQueryBackup = /home/tangz/Software/xDB_10_3/xDB/backup/LMPIQueryBackup.xdbbu
+2013-05-31 16:49:11,941  nrWarmupQueries = 1000
+2013-05-31 16:49:11,941  internal = true
+2013-05-31 16:49:11,941  nrWarmupIngest = 1000
+2013-05-31 16:49:11,941  version = 10.3
+2013-05-31 16:49:11,941 ----
+2013-05-31 16:49:12,022 -> Running Suite standalone or as Server.
+2013-05-31 16:49:12,023 SETUP : Starting
+2013-05-31 16:49:12,023 SETUP : Add Systems [systems=fed_int]
+2013-05-31 16:49:12,067 SETUP : Add Systems [systems=db_ext]
+2013-05-31 16:49:12,068 SETUP : Add Systems [systems=db_int]
+2013-05-31 16:49:12,069 SETUP : If < Exists Path [path=/home/tangz/Software/xDB_10_3/xDB/backup/LMPIQueryBackup.xdbbu] > then [ Delete Federation [bootstrapPath=/home/tangz/Software/xDB_10_3/xDB/data/XhiveDatabase.bootstrap]
+2013-05-31 16:49:12,091 Condition was TRUE => Delete Federation [bootstrapPath=/home/tangz/Software/xDB_10_3/xDB/data/XhiveDatabase.bootstrap]
+2013-05-31 16:49:12,745 SETUP : Restore Federation [backup=/home/tangz/Software/xDB_10_3/xDB/backup/LMPIQueryBackup.xdbbu]
+2013-05-31 16:49:41,102 SETUP : Finished. Phase took 29079 ms.
+2013-05-31 16:49:41,102 SETUP : FM (Lin Ph End) - B : U=12MB,470KB,560B;F=44MB,233KB,464B;T=56MB,704KB;M=910MB,256KB
+2013-05-31 16:49:41,310 SETUP : FM (Lin Ph End) - A : U=2MB,838KB,240B;F=53MB,889KB,784B;T=56MB,704KB;M=910MB,256KB
+2013-05-31 16:49:41,311 Starting Test : xQuery Test by :cs_q101
+2013-05-31 16:49:41,332 SETUP : Starting
+2013-05-31 16:49:41,332 SETUP : Delete Federation [bootstrapPath=/home/tangz/Software/xDB_10_3/xDB/data/XhiveDatabase.bootstrap]
+2013-05-31 16:49:43,128 SETUP : Restore Federation [backup=/home/tangz/Software/xDB_10_3/xDB/backup/LMPIQueryBackup.xdbbu]
+2013-05-31 16:50:07,807 SETUP : Connect System [systemRef=db_int]
+2013-05-31 16:50:16,776 SETUP : Finished. Phase took 35444 ms.
+2013-05-31 16:50:16,777 SETUP : FM (Lin Ph End) - B : U=14MB,495KB,128B;F=42MB,208KB,896B;T=56MB,704KB;M=910MB,256KB
+2013-05-31 16:50:16,895 SETUP : FM (Lin Ph End) - A : U=3MB,891KB,160B;F=52MB,836KB,864B;T=56MB,704KB;M=910MB,256KB
+2013-05-31 16:50:17,616 WARMUP : Starting
+2013-05-31 16:50:29,826 WARMUP : Finished. Phase took 12209 ms.
+2013-05-31 16:50:29,828 LOG : FM (Del Stats) - B : U=165MB,424KB,312B;F=37MB,535KB,712B;T=202MB,960KB;M=910MB,256KB
+2013-05-31 16:50:30,008 LOG : FM (Del Stats) - A : U=49MB,668KB,384B;F=171MB,611KB,640B;T=221MB,256KB;M=910MB,256KB
+2013-05-31 16:50:30,010 RUN : Starting
+2013-05-31 16:50:32,414 RUN : Finished. Phase took 2404 ms.
+2013-05-31 16:50:32,415 LOG : FM (Del Stats) - B : U=216MB,970KB,752B;F=46MB,949KB,272B;T=263MB,896KB;M=910MB,256KB
+2013-05-31 16:50:32,601 LOG : FM (Del Stats) - A : U=58MB,633KB,552B;F=234MB,454KB,472B;T=293MB,64KB;M=910MB,256KB
+2013-05-31 16:50:32,602 FM (Main Ph End) - B : U=61MB,455KB,104B;F=231MB,632KB,920B;T=293MB,64KB;M=910MB,256KB
+2013-05-31 16:50:32,785 FM (Main Ph End) - A : U=56MB,956KB,488B;F=228MB,387KB,536B;T=285MB,320KB;M=910MB,256KB
+2013-05-31 16:50:32,786 CLEANUP : Starting
+2013-05-31 16:50:32,786 CLEANUP : Disconnect System [systemRef=db_int]
+2013-05-31 16:50:33,307 CLEANUP : Connect System [systemRef=fed_int]
+2013-05-31 16:50:33,487 CLEANUP : Delete Database [databaseName=MyDatabase]
+2013-05-31 16:50:33,768 CLEANUP : Disconnect System [systemRef=fed_int]
+2013-05-31 16:50:33,822 CLEANUP : Finished. Phase took 1036 ms.
+2013-05-31 16:50:33,822 CLEANUP : FM (Lin Ph End) - B : U=76MB,269KB,528B;F=209MB,50KB,496B;T=285MB,320KB;M=910MB,256KB
+2013-05-31 16:50:33,998 CLEANUP : FM (Lin Ph End) - A : U=28MB,684KB,664B;F=256MB,659KB,360B;T=285MB,320KB;M=910MB,256KB
+2013-05-31 16:50:33,999 Test Finished : xQuery Test by :cs_q101
+2013-05-31 16:50:34,000 LOG : FM (Del Test) - B : U=30MB,989KB,352B;F=254MB,354KB,672B;T=285MB,320KB;M=910MB,256KB
+2013-05-31 16:50:34,167 LOG : FM (Del Test) - A : U=28MB,672KB,240B;F=256MB,671KB,784B;T=285MB,320KB;M=910MB,256KB
+2013-05-31 16:50:34,167 CLEANUP : Starting
+2013-05-31 16:50:34,168 CLEANUP : Disconnect System [systemRef=db_int]
+2013-05-31 16:50:34,169 CLEANUP : If < Is False [parameter=internal] > then [ Stop Listener [port=1235;systemRef=fed_int]
+2013-05-31 16:50:34,169 Condition was FALSE => Do Nothing (NO_SESSION)
+2013-05-31 16:50:34,170 CLEANUP : Disconnect System [systemRef=fed_int]
+2013-05-31 16:50:34,171 CLEANUP : Finished. Phase took 3 ms.
+2013-05-31 16:50:34,172 CLEANUP : FM (Lin Ph End) - B : U=28MB,672KB,240B;F=256MB,671KB,784B;T=285MB,320KB;M=910MB,256KB
+2013-05-31 16:50:34,342 CLEANUP : FM (Lin Ph End) - A : U=28MB,657KB,16B;F=256MB,686KB,1008B;T=285MB,320KB;M=910MB,256KB
+2013-05-31 16:50:34,342 Suite Finished : LMPI Query Test Suite (3)

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<summaryLog qaHarness="3.0.2" startTime="Tue May 21 22:25:38 PDT 2013">
+  <environment>
+    <host os="Windows Server 2008 R2" name="xPlore" ip="10.37.10.206" user="Administrator"/>
+    <versions>
+        <jvm version="Oracle Corporation 1.7.0_21"/>
+    </versions>
+    <primaryContentServer>
+        <docbase name="2013-05-21 10:25:38.811: "/>
+        <server version="2013-05-21 10:25:38.812: "/>
+        <host name="2013-05-21 10:25:38.812: "/>
+    </primaryContentServer>
+    <paths>
+        <run path="2013-05-21 10:25:38.813: C:\software\component\scripts"/>
+        <log path="2013-05-21 10:25:38.813: C:\software\component\outputs\20130521_222538\logs"/>
+        <dfc path="2013-05-21 10:25:38.819: C:\software\component\lib\dsearch\dfc.jar"/>
+    </paths>
+  </environment>
+  <testSuites groupName="admin">
+    <testSuite name="pre_admin" total="1" subTestsTotal="1" passed="1" subTestsPassed="1" failed="0" subTestsFailed="0" timeTaken="19 seconds"/>
+    <testSuite name="multinode" total="35" subTestsTotal="35" passed="21" subTestsPassed="21" failed="14" subTestsFailed="14" timeTaken="3349 seconds"/>
+    <testSuite name="1.1" total="47" subTestsTotal="47" passed="33" subTestsPassed="33" failed="14" subTestsFailed="14" timeTaken="1051 seconds"/>
+    <testSuite name="commandline" total="21" subTestsTotal="21" passed="20" subTestsPassed="20" failed="1" subTestsFailed="1" timeTaken="386 seconds"/>
+    <testSuite name="tracingManagement" total="5" subTestsTotal="5" passed="5" subTestsPassed="5" failed="0" subTestsFailed="0" timeTaken="6 seconds"/>
+    <testSuite name="systemManagement" total="36" subTestsTotal="36" passed="36" subTestsPassed="36" failed="0" subTestsFailed="0" timeTaken="327 seconds"/>
+    <testSuite name="logManagement" total="20" subTestsTotal="29" passed="18" subTestsPassed="27" failed="2" subTestsFailed="2" timeTaken="1016 seconds"/>
+    <testSuite name="cps" total="36" subTestsTotal="36" passed="34" subTestsPassed="34" failed="2" subTestsFailed="2" timeTaken="239 seconds"/>
+    <testSuite name="searchManagement" total="12" subTestsTotal="71" passed="7" subTestsPassed="58" failed="5" subTestsFailed="13" timeTaken="628 seconds"/>
+    <testSuite name="audit" total="11" subTestsTotal="12" passed="6" subTestsPassed="6" failed="5" subTestsFailed="6" timeTaken="82 seconds"/>
+    <testSuite name="thesaurus" total="1" subTestsTotal="30" passed="0" subTestsPassed="28" failed="1" subTestsFailed="2" timeTaken="492 seconds"/>
+    <testSuite name="dataManagement" total="119" subTestsTotal="254" passed="115" subTestsPassed="239" failed="4" subTestsFailed="15" timeTaken="6713 seconds"/>
+    <testSuite name="indexManagement" total="21" subTestsTotal="21" passed="18" subTestsPassed="18" failed="3" subTestsFailed="3" timeTaken="5196 seconds"/>
+    <testSuite name="bigData" total="4" subTestsTotal="4" passed="4" subTestsPassed="4" failed="0" subTestsFailed="0" timeTaken="6115 seconds"/>
+  </testSuites>
+  <summary total="369" subTestsTotal="602" passed="318" subTestsPassed="530" failed="51" subTestsFailed="72" timeTaken="25619 seconds"/>
+</summaryLog>

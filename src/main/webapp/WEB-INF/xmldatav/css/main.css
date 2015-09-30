@@ -1,0 +1,49 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+#xquery-input {
+	width: 450px;
+}
+
+#samplexml {
+	width: 450px;
+}
+
+#yAxisQuery {
+	width: 300px;
+}
+
+#xAxisQuery {
+	width: 300px;
+}
+
+#showXQuery {
+	margin-left: 400px;
+}
+
+.form-horizontal .control-label {
+	width: auto;
+}
+
+.xquery-div {
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

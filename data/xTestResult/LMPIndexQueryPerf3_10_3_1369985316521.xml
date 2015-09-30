@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?><suite name="LMPI Query Test Suite (3)" id="LMPIndexQueryPerf3" clientId="">
+<xTest>
+<version>1.3.0</version>
+<build>${xtest.version}</build>
+</xTest>
+<xDB>
+<version>unknown</version>
+<branch>xDB 10_3</branch>
+<build>2284710</build>
+<jarType>plain</jarType>
+</xDB>
+<system>
+<cpus count="4">
+<cpu id="0">
+<vendor>Intel</vendor>
+<model>Core(TM) i5-2400 CPU @ 3.10GHz</model>
+<mhz>3101</mhz>
+<cacheSize>6144</cacheSize>
+<coresPerSocket>16</coresPerSocket>
+<cores>4</cores>
+<sockets>4</sockets>
+</cpu>
+<cpu id="1">
+<vendor>Intel</vendor>
+<model>Core(TM) i5-2400 CPU @ 3.10GHz</model>
+<mhz>3101</mhz>
+<cacheSize>6144</cacheSize>
+<coresPerSocket>16</coresPerSocket>
+<cores>4</cores>
+<sockets>4</sockets>
+</cpu>
+<cpu id="2">
+<vendor>Intel</vendor>
+<model>Core(TM) i5-2400 CPU @ 3.10GHz</model>
+<mhz>3101</mhz>
+<cacheSize>6144</cacheSize>
+<coresPerSocket>16</coresPerSocket>
+<cores>4</cores>
+<sockets>4</sockets>
+</cpu>
+<cpu id="3">
+<vendor>Intel</vendor>
+<model>Core(TM) i5-2400 CPU @ 3.10GHz</model>
+<mhz>3101</mhz>
+<cacheSize>6144</cacheSize>
+<coresPerSocket>16</coresPerSocket>
+<cores>4</cores>
+<sockets>4</sockets>
+</cpu>
+</cpus>
+<filesystems count="14">
+<filesystem id="0">
+<mountPoint>/</mountPoint>
+<device>/dev/sda4</device>
+<type>2</type>
+<typeName>local</typeName>
+<systemType>ext4</systemType>
+<options>rw,errors=remount-ro</options>
+<flags>0</flags>
+<totalSize>23314252</totalSize>
+</filesystem>
+<filesystem id="1">
+<mountPoint>/proc</mountPoint>
+<device>proc</device>
+<type>1</type>
+<typeName>none</typeName>
+<systemType>proc</systemType>
+<options>rw,noexec,nosuid,nodev</options>
+<flags>0</flags>
+<totalSize>0</totalSize>
+</filesystem>
+<filesystem id="2">
+<mountPoint>/sys</mountPoint>
+<device>sysfs</device>
+<type>1</type>
+<typeName>none</typeName>
+<systemType>sysfs</systemType>
+<options>rw,noexec,nosuid,nodev</options>
+<flags>0</flags>
+<totalSize>0</totalSize>
+</filesystem>
+<filesystem id="3">
+<mountPoint>/sys/fs/fuse/connections</mountPoint>
+<device>none</device>
+<type>1</type>
+<typeName>none</typeName>
+<systemType>fusectl</systemType>
+<options>rw</options>
+<flags>0</flags>
+<totalSize>0</totalSize>
+</filesystem>
+<filesystem id="4">
+<mountPoint>/sys/kernel/debug</mountPoint>
+<device>none</device>
+<type>1</type>
+<typeName>none</typeName>
+<systemType>debugfs</systemType>
+<options>rw</options>
+<flags>0</flags>
+<totalSize>0</totalSize>
+</filesystem>
+<filesystem id="5">
+<mountPoint>/sys/kernel/security</mountPoint>
+<device>none</device>
+<type>1</type>
+<typeName>none</typeName>
+<systemType>securityfs</systemType>
+<options>rw</options>
+<flags>0</flags>
+<totalSize>0</totalSize>
+</filesystem>
+<filesystem id="6">
+<mountPoint>/dev</mountPoint>
+<device>udev</device>
+<type>1</type>
+<typeName>none</typeName>
+<systemType>devtmpfs</systemType>
+<options>rw,mode=0755</options>
+<flags>0</flags>
+<totalSize>1927028</totalSize>
+</filesystem>
+<filesystem id="7">
+<mountPoint>/dev/pts</mountPoint>
+<device>devpts</device>
+<type>1</type>
+<typeName>none</typeName>
+<systemType>devpts</systemType>
+<options>rw,noexec,nosuid,gid=5,mode=0620</options>
+<flags>0</flags>
+<totalSize>0</totalSize>
+</filesystem>
+<filesystem id="8">
+<mountPoint>/run</mountPoint>
+<device>tmpfs</device>
+<type>1</type>
+<typeName>none</typeName>
+<systemType>tmpfs</systemType>
+<options>rw,noexec,nosuid,size=10%,mode=0755</options>
+<flags>0</flags>
+<totalSize>774340</totalSize>
+</filesystem>
+<filesystem id="9">
+<mountPoint>/run/lock</mountPoint>
+<device>none</device>
+<type>1</type>
+<typeName>none</typeName>
+<systemType>tmpfs</systemType>
+<options>rw,noexec,nosuid,nodev,size=5242880</options>
+<flags>0</flags>
+<totalSize>5120</totalSize>
+</filesystem>
+<filesystem id="10">
+<mountPoint>/run/shm</mountPoint>
+<device>none</device>
+<type>1</type>
+<typeName>none</typeName>
+<systemType>tmpfs</systemType>
+<options>rw,nosuid,nodev</options>
+<flags>0</flags>
+<totalSize>1935840</totalSize>
+</filesystem>
+<filesystem id="11">
+<mountPoint>/home</mountPoint>
+<device>/dev/sda2</device>
+<type>2</type>
+<typeName>local</typeName>
+<systemType>ext4</systemType>
+<options>rw</options>
+<flags>0</flags>
+<totalSize>213084092</totalSize>
+</filesystem>
+<filesystem id="12">
+<mountPoint>/proc/sys/fs/binfmt_misc</mountPoint>
+<device>binfmt_misc</device>
+<type>1</type>
+<typeName>none</typeName>
+<systemType>binfmt_misc</systemType>
+<options>rw,noexec,nosuid,nodev</options>
+<flags>0</flags>
+<totalSize>0</totalSize>
+</filesystem>
+<filesystem id="13">
+<mountPoint>/home/tangz/.gvfs</mountPoint>
+<device>gvfs-fuse-daemon</device>
+<type>1</type>
+<typeName>none</typeName>
+<systemType>fuse.gvfs-fuse-daemon</systemType>
+<options>rw,nosuid,nodev,user=tangz</options>
+<flags>0</flags>
+<totalSize>0</totalSize>
+</filesystem>
+</filesystems>
+<memory>
+<totalSize>3964604416</totalSize>
+</memory>
+<os>
+<name>Linux</name>
+<architecture>amd64</architecture>
+<version>3.2.0-43-generic</version>
+</os>
+<jvm>
+<vendor>Sun Microsystems Inc.</vendor>
+<version>1.6.0_43</version>
+<maxMemory>954466304</maxMemory>
+<processors>4</processors>
+</jvm>
+</system>
+<suiteParameters>
+<bootstrap>/home/tangz/Software/xDB_10_3/xDB/data/XhiveDatabase.bootstrap</bootstrap>
+<nrRunIngest>100000</nrRunIngest>
+<batchSize>100</batchSize>
+<nrRunQueries>1000</nrRunQueries>
+<LMPIQueryBackup>/home/tangz/Software/xDB_10_3/xDB/backup/LMPIQueryBackup.xdbbu</LMPIQueryBackup>
+<nrWarmupQueries>1000</nrWarmupQueries>
+<internal>true</internal>
+<nrWarmupIngest>1000</nrWarmupIngest>
+<version>10.3</version>
+</suiteParameters>
+<phase type="SETUP">
+<action name="Add Systems">
+<aspects systems="fed_int"/>
+<nrThreads>1</nrThreads>
+<thread name="main">
+<duration>0.018204</duration>
+<execCount>1</execCount>
+<execRate>54932.98176225005</execRate>
+<dlCount>0</dlCount>
+<dlRate>0</dlRate>
+<avgExecTime>0.018204</avgExecTime>
+<rspTime avg="0.018204" max="0.018204" min="9.223372036854775E12" stdDev="0"/>
+</thread>
+</action>
+<action name="Add Systems">
+<aspects systems="db_ext"/>
+<nrThreads>1</nrThreads>
+<thread name="main">
+<duration>0.002215</duration>
+<execCount>1</execCount>
+<execRate>451467.26862302487</execRate>
+<dlCount>0</dlCount>
+<dlRate>0</dlRate>
+<avgExecTime>0.002215</avgExecTime>
+<rspTime avg="0.002215" max="0.002215" min="9.223372036854775E12" stdDev="0"/>
+</thread>
+</action>
+<action name="Add Systems">
+<aspects systems="db_int"/>
+<nrThreads>1</nrThreads>
+<thread name="main">
+<duration>0.002099</duration>
+<execCount>1</execCount>
+<execRate>476417.34159123385</execRate>
+<dlCount>0</dlCount>
+<dlRate>0</dlRate>
+<avgExecTime>0.002099</avgExecTime>
+<rspTime avg="0.002099" max="0.002099" min="9.223372036854775E12" stdDev="0"/>
+</thread>
+</action>
+<action name="If &lt; Exists Path &gt; then [ Delete Federation ]">
+<aspects/>
+<nrThreads>1</nrThreads>
+<thread name="main">
+<duration>239.201613</duration>
+<execCount>1</execCount>
+<execRate>4.180573815779411</execRate>
+<dlCount>0</dlCount>
+<dlRate>0</dlRate>
+<avgExecTime>239.201613</avgExecTime>
+<rspTime avg="239.201613" max="239.201613" min="9.223372036854775E12" stdDev="0"/>
+</thread>
+</action>
+<action name="Restore Federation">
+<aspects backup="/home/tangz/Software/xDB_10_3/xDB/backup/LMPIQueryBackup.xdbbu"/>
+<nrThreads>1</nrThreads>
+<thread name="main">
+<duration>26208.439738</duration>
+<execCount>1</execCount>
+<execRate>0.038155647951453035</execRate>
+<dlCount>0</dlCount>
+<dlRate>0</dlRate>
+<avgExecTime>26208.439738</avgExecTime>
+<rspTime avg="26208.439738" max="26208.439738" min="9.223372036854775E12" stdDev="0"/>
+</thread>
+</action>
+<time duration="26453" start="1369985316923" startTime="2013-05-31T15:28:36" end="1369985343376" endTime="2013-05-31T15:29:03"/>
+</phase>
+<test name="xQuery Test by :cs_q101">
+<aspects/>
+<phase type="SETUP">
+<action name="Delete Federation">
+<aspects bootstrapPath="/home/tangz/Software/xDB_10_3/xDB/data/XhiveDatabase.bootstrap"/>
+<nrThreads>1</nrThreads>
+<thread name="main">
+<duration>29.026024</duration>
+<execCount>1</execCount>
+<execRate>34.45184225025102</execRate>
+<dlCount>0</dlCount>
+<dlRate>0</dlRate>
+<avgExecTime>29.026024</avgExecTime>
+<rspTime avg="29.026024" max="29.026024" min="9.223372036854775E12" stdDev="0"/>
+</thread>
+</action>
+<action name="Restore Federation">
+<aspects backup="/home/tangz/Software/xDB_10_3/xDB/backup/LMPIQueryBackup.xdbbu"/>
+<nrThreads>1</nrThreads>
+<thread name="main">
+<duration>25630.311003</duration>
+<execCount>1</execCount>
+<execRate>0.03901630377731082</execRate>
+<dlCount>0</dlCount>
+<dlRate>0</dlRate>
+<avgExecTime>25630.311003</avgExecTime>
+<rspTime avg="25630.311003" max="25630.311003" min="9.223372036854775E12" stdDev="0"/>
+</thread>
+</action>
+<action name="Connect System">
+<aspects systemRef="db_int"/>
+<nrThreads>1</nrThreads>
+<thread name="main">
+<duration>2731.812163</duration>
+<execCount>1</execCount>
+<execRate>0.36605737888721745</execRate>
+<dlCount>0</dlCount>
+<dlRate>0</dlRate>
+<avgExecTime>2731.812163</avgExecTime>
+<rspTime avg="2731.812163" max="2731.812163" min="9.223372036854775E12" stdDev="0"/>
+</thread>
+</action>
+<time duration="28394" start="1369985343749" startTime="2013-05-31T15:29:03" end="1369985372143" endTime="2013-05-31T15:29:32"/>
+</phase>
+<phase type="WARMUP">
+<time duration="6660" start="1369985372563" startTime="2013-05-31T15:29:32" end="1369985379223" endTime="2013-05-31T15:29:39"/>
+<action name="Execute Query">
+<aspects context="/Lib_10_3" queryId="cs_q101"/>
+<nrThreads>1</nrThreads>
+<aggregated>
+<duration>6660.0</duration>
+<execCount>1000</execCount>
+<execRate>150.15015015015015</execRate>
+<dlCount>0</dlCount>
+<dlRate>0.0</dlRate>
+<avgExecTime>6.66</avgExecTime>
+<rspTime avg="6.654747728" max="1696.9716489999998" min="2.241626" stdDev="0.0"/>
+</aggregated>
+<thread name="ST-0.0-[Execute Query]">
+<duration>6660.0</duration>
+<execCount>1000</execCount>
+<execRate>150.15015015015015</execRate>
+<dlCount>0</dlCount>
+<dlRate>0.0</dlRate>
+<avgExecTime>6.66</avgExecTime>
+<rspTime avg="6.654747728" max="1696.9716489999998" min="2.241626" stdDev="53.689390059299726"/>
+</thread>
+</action>
+</phase>
+<phase type="RUN">
+<time duration="2452" start="1369985379402" startTime="2013-05-31T15:29:39" end="1369985381854" endTime="2013-05-31T15:29:41"/>
+<action name="Execute Query">
+<aspects context="/Lib_10_3" queryId="cs_q101"/>
+<nrThreads>1</nrThreads>
+<aggregated>
+<duration>2452.0</duration>
+<execCount>1000</execCount>
+<execRate>407.8303425774878</execRate>
+<dlCount>0</dlCount>
+<dlRate>0.0</dlRate>
+<avgExecTime>2.452</avgExecTime>
+<rspTime avg="2.447319896" max="16.476346" min="1.8123559999999999" stdDev="0.0"/>
+</aggregated>
+<thread name="ST-0.0-[Execute Query]">
+<duration>2452.0</duration>
+<execCount>1000</execCount>
+<execRate>407.8303425774878</execRate>
+<dlCount>0</dlCount>
+<dlRate>0.0</dlRate>
+<avgExecTime>2.452</avgExecTime>
+<rspTime avg="2.447319896" max="16.476346" min="1.8123559999999999" stdDev="1.2701953105675738"/>
+</thread>
+</action>
+</phase>
+<phase type="CLEANUP">
+<action name="Disconnect System">
+<aspects systemRef="db_int"/>
+<nrThreads>1</nrThreads>
+<thread name="main">
+<duration>1021.475043</duration>
+<execCount>1</execCount>
+<execRate>0.9789764388790848</execRate>
+<dlCount>0</dlCount>
+<dlRate>0</dlRate>
+<avgExecTime>1021.475043</avgExecTime>
+<rspTime avg="1021.475043" max="1021.475043" min="9.223372036854775E12" stdDev="0"/>
+</thread>
+</action>
+<action name="Connect System">
+<aspects systemRef="fed_int"/>
+<nrThreads>1</nrThreads>
+<thread name="main">
+<duration>137.679419</duration>
+<execCount>1</execCount>
+<execRate>7.263249709094139</execRate>
+<dlCount>0</dlCount>
+<dlRate>0</dlRate>
+<avgExecTime>137.679419</avgExecTime>
+<rspTime avg="137.679419" max="137.679419" min="9.223372036854775E12" stdDev="0"/>
+</thread>
+</action>
+<action name="Delete Database">
+<aspects databaseName="MyDatabase"/>
+<nrThreads>1</nrThreads>
+<thread name="main">
+<duration>278.088135</duration>
+<execCount>1</execCount>
+<execRate>3.5959822593653623</execRate>
+<dlCount>0</dlCount>
+<dlRate>0</dlRate>
+<avgExecTime>278.088135</avgExecTime>
+<rspTime avg="278.088135" max="278.088135" min="9.223372036854775E12" stdDev="0"/>
+</thread>
+</action>
+<action name="Disconnect System">
+<aspects systemRef="fed_int"/>
+<nrThreads>1</nrThreads>
+<thread name="main">
+<duration>44.690639</duration>
+<execCount>1</execCount>
+<execRate>22.3760506087192</execRate>
+<dlCount>0</dlCount>
+<dlRate>0</dlRate>
+<avgExecTime>44.690639</avgExecTime>
+<rspTime avg="44.690639" max="44.690639" min="9.223372036854775E12" stdDev="0"/>
+</thread>
+</action>
+<time duration="1488" start="1369985382432" startTime="2013-05-31T15:29:42" end="1369985383920" endTime="2013-05-31T15:29:43"/>
+</phase>
+<time duration="40342" start="1369985343748" startTime="2013-05-31T15:29:03" end="1369985384090" endTime="2013-05-31T15:29:44"/>
+</test>
+<phase type="CLEANUP">
+<action name="Disconnect System">
+<aspects systemRef="db_int"/>
+<nrThreads>1</nrThreads>
+<thread name="main">
+<duration>0.006946</duration>
+<execCount>1</execCount>
+<execRate>143967.75122372588</execRate>
+<dlCount>0</dlCount>
+<dlRate>0</dlRate>
+<avgExecTime>0.006946</avgExecTime>
+<rspTime avg="0.006946" max="0.006946" min="9.223372036854775E12" stdDev="0"/>
+</thread>
+</action>
+<action name="If &lt; Is False &gt; then [ Stop Listener ]">
+<aspects/>
+<nrThreads>1</nrThreads>
+<thread name="main">
+<duration>0.11151</duration>
+<execCount>1</execCount>
+<execRate>8967.80557797507</execRate>
+<dlCount>0</dlCount>
+<dlRate>0</dlRate>
+<avgExecTime>0.11151</avgExecTime>
+<rspTime avg="0.11151" max="0.11151" min="9.223372036854775E12" stdDev="0"/>
+</thread>
+</action>
+<action name="Disconnect System">
+<aspects systemRef="fed_int"/>
+<nrThreads>1</nrThreads>
+<thread name="main">
+<duration>0.00346</duration>
+<execCount>1</execCount>
+<execRate>289017.34104046243</execRate>
+<dlCount>0</dlCount>
+<dlRate>0</dlRate>
+<avgExecTime>0.00346</avgExecTime>
+<rspTime avg="0.00346" max="0.00346" min="9.223372036854775E12" stdDev="0"/>
+</thread>
+</action>
+<time duration="4" start="1369985384257" startTime="2013-05-31T15:29:44" end="1369985384261" endTime="2013-05-31T15:29:44"/>
+</phase>
+<time duration="67628" start="1369985316803" startTime="2013-05-31T15:28:36" end="1369985384431" endTime="2013-05-31T15:29:44"/>
+</suite>

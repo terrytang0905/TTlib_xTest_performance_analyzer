@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<server id="241c5153-9311-4d42-a3af-16e500668025" passwd="w4Y3r4OcASO6jQlCYDAa7xSR+96MK5tn5Kg2etHW" license="025ByMJA6x1xyN#PQTXQyZSSxRPPRMIADgRWbsbrQ" pagesize="4096" version="xDB 10.3">
+    <node port="1235" host="fe80:0:0:0:72f3:95ff:fe1a:caed%2" name="primary">
+        <log keep-log-files="false" id="1370660180139" path="/home/tangz/git/tangzGitRepo/xProject/xTestPerformanceAnalyzer/data/log"/>
+    </node>
+    <database name="xTestDatabase">
+        <segment reserved="false" usable="true" usage="non_detachable" state="read_write" version="1" temp="false" id="default">
+            <file id="0" path="xTestDatabase-default-0.XhiveDatabase.DB"/>
+            <binding-server name="primary"/>
+        </segment>
+        <segment reserved="false" usable="true" usage="non_detachable" state="read_write" version="1" temp="true" id="temporary">
+            <file id="1" path="xTestDatabase-temporary-0.XhiveDatabase.DB"/>
+            <binding-server name="primary"/>
+        </segment>
+    </database>
+</server>

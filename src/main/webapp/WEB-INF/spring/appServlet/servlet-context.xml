@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- DispatcherServlet Context: defines this servlet's request-processing 
+		infrastructure -->
+
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<mvc:annotation-driven />
+
+	<!-- Handles HTTP GET requests for /resources/** by efficiently serving 
+		up static resources in the ${webappRoot}/resources directory -->
+	<mvc:resources mapping="**" location="/WEB-INF/xtestanalyzer/" />
+
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/home/*" />
+			<bean class="com.emc.xtest.analyzer.web.XTestAnalyzerInterceptor"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
+
+	<!-- <bean
+		class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping">
+	</bean> -->
+	
+	<bean
+		class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+		<property name="messageConverters">
+			<list>
+				<ref bean="stringConverter" />
+				<ref bean="jsonConverter" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="stringConverter"
+		class="org.springframework.http.converter.StringHttpMessageConverter">
+		<property name="supportedMediaTypes">
+			<list>
+				<value>text/html;charset=UTF-8</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="jsonConverter"
+		class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+		<property name="supportedMediaTypes" value="application/json" />
+	</bean>
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="50000000" />
+	</bean>
+
+	<bean id="propertiesConfiguration"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location">
+			<value>classpath:xtestAnalyzer_config.properties</value>
+		</property>
+	</bean>
+
+	<bean id="xTestAnalyzerProperties"
+		class="com.emc.xtest.analyzer.utilities.XTestAnalyzerProperties"
+		factory-method="createInstance">
+		<property name="p4_serveruri" value="${p4.serveruri}" />
+		<property name="p4_user" value="${p4.user}" />
+		<property name="p4_password" value="${p4.password}" />
+		<property name="p4_clientname" value="${p4.clientname}" />
+		<property name="xdb_version" value="${xdb.version}" />
+		<property name="xdb_location" value="${xdb.location}" />
+		<property name="xtest_home" value="${xtest.home}" />
+		<property name="xtest_storageLocation" value="${xtest.storagelocation}" />
+	</bean>
+
+	<bean id="exceptionResolver"
+		class="com.emc.xtest.analyzer.web.CustomerSimpleMappingExceptionResolver">
+		<property name="defaultErrorView" value="/error" />
+		<property name="defaultStatusCode" value="500" />
+		<property name="exceptionMappings">
+			<props>
+				<prop key="com.emc.xtest.analyzer.utilities.XTestAnalyzerException">error</prop>
+				<prop key="java.lang.Exception">error</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="xDBManager" class="com.emc.xtest.analyzer.dao.xDBProvider.XDBManager"
+		factory-method="getInstance">
+	</bean>
+
+	<bean id="xDBDaoManipulation"
+		class="com.emc.xtest.analyzer.dao.xDBProvider.XDBDaoManipulation">
+	</bean>
+	
+	<bean id="xTestContextService"
+		class="com.emc.xtest.analyzer.service.XTestContextService">
+	</bean>
+	
+	<bean id="xTestListenerService" 
+		class="com.emc.xtest.analyzer.service.XTestListenerService">
+	</bean>	
+
+	<bean id="p4ConnectionService" class="com.emc.xtest.analyzer.service.P4ConnectionService"
+		lazy-init="true">
+	</bean>
+
+	<bean id="xTestExecutorService" class="com.emc.xtest.analyzer.service.XTestExecutorService">
+	</bean>
+
+	<bean id="project" factory-bean="xTestExecutorService"
+		factory-method="initProject">
+	</bean>
+
+	<bean id="benchMarkArchiveService" class="com.emc.xtest.analyzer.service.BenchMarkArchiveService">
+		<property name="xTestResultFormatFileName">
+			<value>xTestResultFormat.xsl</value>
+		</property>
+	</bean>
+
+	<bean id="reportAnalysisService" class="com.emc.xtest.analyzer.service.ReportAnalysisService">
+	</bean>
+
+	<bean id="graphAnalysisService" class="com.emc.xtest.analyzer.service.GraphAnalysisService">
+	</bean>
+
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources 
+		in the /WEB-INF/views directory -->
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/xtestanalyzer/" />
+		<property name="suffix" value=".jsp" />
+		<!-- <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" 
+			/> -->
+	</bean>
+
+	<context:annotation-config />
+
+	<context:component-scan base-package="com.emc.xtest.analyzer" />
+
+</beans>

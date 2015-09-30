@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<summaryLog qaHarness="3.0.2" startTime="Sun May 19 23:28:57 PDT 2013">
+  <environment>
+    <host os="Windows Server 2008 R2" name="xPlore-Reg4" ip="10.32.168.59" user="SYSTEM"/>
+    <versions>
+        <jvm version="Oracle Corporation 1.7.0_17"/>
+    </versions>
+    <primaryContentServer>
+        <docbase name="2013-05-19 11:28:57.554: "/>
+        <server version="2013-05-19 11:28:57.555: "/>
+        <host name="2013-05-19 11:28:57.556: "/>
+    </primaryContentServer>
+    <paths>
+        <run path="2013-05-19 11:28:57.556: C:\Perforce\weekly\component\depot\Platform\EnterpriseSearch\QA\component\scripts"/>
+        <log path="2013-05-19 11:28:57.556: C:\Perforce\weekly\component\depot\Platform\EnterpriseSearch\QA\component\outputs\20130519_232856\logs"/>
+        <dfc path="2013-05-19 11:28:57.556: C:\Perforce\weekly\component\depot\Platform\EnterpriseSearch\QA\component\lib\dfc.jar"/>
+    </paths>
+  </environment>
+  <testSuites groupName="pre_setup">
+    <testSuite name="pre_setup" total="6" subTestsTotal="6" passed="6" subTestsPassed="6" failed="0" subTestsFailed="0" timeTaken="33 seconds"/>
+  </testSuites>
+  <testSuites groupName="index">
+    <testSuite name="index_format_support" total="74" subTestsTotal="74" passed="74" subTestsPassed="74" failed="0" subTestsFailed="0" timeTaken="1020 seconds"/>
+    <testSuite name="index_format_corrupt" total="31" subTestsTotal="31" passed="31" subTestsPassed="31" failed="0" subTestsFailed="0" timeTaken="403 seconds"/>
+    <testSuite name="index_content" total="19" subTestsTotal="19" passed="18" subTestsPassed="18" failed="1" subTestsFailed="1" timeTaken="294 seconds"/>
+    <testSuite name="index_xml" total="14" subTestsTotal="14" passed="13" subTestsPassed="13" failed="1" subTestsFailed="1" timeTaken="1220 seconds"/>
+    <testSuite name="index_language" total="13" subTestsTotal="13" passed="13" subTestsPassed="13" failed="0" subTestsFailed="0" timeTaken="280 seconds"/>
+    <testSuite name="index_neg" total="5" subTestsTotal="5" passed="5" subTestsPassed="5" failed="0" subTestsFailed="0" timeTaken="219 seconds"/>
+    <testSuite name="index_option" total="24" subTestsTotal="24" passed="24" subTestsPassed="24" failed="0" subTestsFailed="0" timeTaken="1012 seconds"/>
+    <testSuite name="index_complex" total="39" subTestsTotal="53" passed="33" subTestsPassed="46" failed="6" subTestsFailed="7" timeTaken="7475 seconds"/>
+    <testSuite name="index_stress" total="2" subTestsTotal="2" passed="2" subTestsPassed="2" failed="0" subTestsFailed="0" timeTaken="1713 seconds"/>
+    <testSuite name="bug1903" total="1" subTestsTotal="1" passed="1" subTestsPassed="1" failed="0" subTestsFailed="0" timeTaken="57 seconds"/>
+  </testSuites>
+  <testSuites groupName="search">
+    <testSuite name="pre_search" total="1" subTestsTotal="1" passed="1" subTestsPassed="1" failed="0" subTestsFailed="0" timeTaken="181 seconds"/>
+    <testSuite name="search_result" total="28" subTestsTotal="28" passed="28" subTestsPassed="28" failed="0" subTestsFailed="0" timeTaken="156 seconds"/>
+    <testSuite name="search_lemmatization" total="61" subTestsTotal="61" passed="61" subTestsPassed="61" failed="0" subTestsFailed="0" timeTaken="268 seconds"/>
+    <testSuite name="search_language" total="7" subTestsTotal="7" passed="6" subTestsPassed="6" failed="1" subTestsFailed="1" timeTaken="741 seconds"/>
+    <testSuite name="search_score" total="51" subTestsTotal="51" passed="51" subTestsPassed="51" failed="0" subTestsFailed="0" timeTaken="663 seconds"/>
+    <testSuite name="search_sorting" total="53" subTestsTotal="53" passed="48" subTestsPassed="48" failed="5" subTestsFailed="5" timeTaken="301 seconds"/>
+    <testSuite name="search_summary" total="63" subTestsTotal="63" passed="63" subTestsPassed="63" failed="0" subTestsFailed="0" timeTaken="1606 seconds"/>
+    <testSuite name="search_summary_exact_phrase" total="10" subTestsTotal="10" passed="10" subTestsPassed="10" failed="0" subTestsFailed="0" timeTaken="345 seconds"/>
+    <testSuite name="search_xml" total="42" subTestsTotal="42" passed="42" subTestsPassed="42" failed="0" subTestsFailed="0" timeTaken="312 seconds"/>
+    <testSuite name="search_tokens" total="7" subTestsTotal="7" passed="7" subTestsPassed="7" failed="0" subTestsFailed="0" timeTaken="142 seconds"/>
+    <testSuite name="search_quality" total="161" subTestsTotal="161" passed="161" subTestsPassed="161" failed="0" subTestsFailed="0" timeTaken="703 seconds"/>
+    <testSuite name="search_fuzzy" total="89" subTestsTotal="89" passed="89" subTestsPassed="89" failed="0" subTestsFailed="0" timeTaken="202 seconds"/>
+    <testSuite name="search_special_character" total="26" subTestsTotal="26" passed="26" subTestsPassed="26" failed="0" subTestsFailed="0" timeTaken="144 seconds"/>
+    <testSuite name="search_thesaurus" total="43" subTestsTotal="43" passed="43" subTestsPassed="43" failed="0" subTestsFailed="0" timeTaken="300 seconds"/>
+    <testSuite name="search_parallel" total="4" subTestsTotal="26" passed="4" subTestsPassed="26" failed="0" subTestsFailed="0" timeTaken="404 seconds"/>
+    <testSuite name="pre_option_data" total="2" subTestsTotal="2" passed="2" subTestsPassed="2" failed="0" subTestsFailed="0" timeTaken="194 seconds"/>
+    <testSuite name="search_option" total="42" subTestsTotal="42" passed="40" subTestsPassed="40" failed="2" subTestsFailed="2" timeTaken="236 seconds"/>
+    <testSuite name="search_warmup" total="15" subTestsTotal="15" passed="15" subTestsPassed="15" failed="0" subTestsFailed="0" timeTaken="653 seconds"/>
+    <testSuite name="pre_xqft_search" total="1" subTestsTotal="1" passed="1" subTestsPassed="1" failed="0" subTestsFailed="0" timeTaken="154 seconds"/>
+    <testSuite name="XQFT_token_phrase_wildcards" total="93" subTestsTotal="93" passed="93" subTestsPassed="93" failed="0" subTestsFailed="0" timeTaken="24 seconds"/>
+    <testSuite name="XQFT_complex" total="14" subTestsTotal="14" passed="14" subTestsPassed="14" failed="0" subTestsFailed="0" timeTaken="3 seconds"/>
+    <testSuite name="XQFT_logical_operator" total="8" subTestsTotal="8" passed="8" subTestsPassed="8" failed="0" subTestsFailed="0" timeTaken="1 seconds"/>
+    <testSuite name="XQFT_keyword" total="8" subTestsTotal="8" passed="8" subTestsPassed="8" failed="0" subTestsFailed="0" timeTaken="2 seconds"/>
+    <testSuite name="XQFT_stemming" total="5" subTestsTotal="5" passed="5" subTestsPassed="5" failed="0" subTestsFailed="0" timeTaken="1 seconds"/>
+    <testSuite name="post_xqft_search" total="1" subTestsTotal="1" passed="1" subTestsPassed="1" failed="0" subTestsFailed="0" timeTaken="3 seconds"/>
+    <testSuite name="post_search" total="1" subTestsTotal="1" passed="1" subTestsPassed="1" failed="0" subTestsFailed="0" timeTaken="44 seconds"/>
+  </testSuites>
+  <testSuites groupName="cps">
+    <testSuite name="pre_cps" total="1" subTestsTotal="1" passed="1" subTestsPassed="1" failed="0" subTestsFailed="0" timeTaken="1 seconds"/>
+    <testSuite name="EmbededRequest" total="160" subTestsTotal="160" passed="153" subTestsPassed="153" failed="7" subTestsFailed="7" timeTaken="925 seconds"/>
+    <testSuite name="batch" total="5" subTestsTotal="5" passed="2" subTestsPassed="2" failed="3" subTestsFailed="3" timeTaken="58 seconds"/>
+    <testSuite name="FileRequest" total="57" subTestsTotal="57" passed="54" subTestsPassed="54" failed="3" subTestsFailed="3" timeTaken="342 seconds"/>
+    <testSuite name="HTTPRequest" total="16" subTestsTotal="16" passed="15" subTestsPassed="15" failed="1" subTestsFailed="1" timeTaken="114 seconds"/>
+    <testSuite name="multiLingual" total="332" subTestsTotal="332" passed="281" subTestsPassed="281" failed="51" subTestsFailed="51" timeTaken="2147 seconds"/>
+    <testSuite name="FileFormatACS" total="1" subTestsTotal="1" passed="1" subTestsPassed="1" failed="0" subTestsFailed="0" timeTaken="101 seconds"/>
+    <testSuite name="resultCustomize" total="7" subTestsTotal="7" passed="7" subTestsPassed="7" failed="0" subTestsFailed="0" timeTaken="38 seconds"/>
+    <testSuite name="questConfig" total="16" subTestsTotal="16" passed="15" subTestsPassed="15" failed="1" subTestsFailed="1" timeTaken="89 seconds"/>
+    <testSuite name="filter" total="11" subTestsTotal="11" passed="9" subTestsPassed="9" failed="2" subTestsFailed="2" timeTaken="58 seconds"/>
+    <testSuite name="mixedFile" total="9" subTestsTotal="9" passed="1" subTestsPassed="1" failed="8" subTestsFailed="8" timeTaken="29 seconds"/>
+    <testSuite name="stress" total="2" subTestsTotal="2" passed="2" subTestsPassed="2" failed="0" subTestsFailed="0" timeTaken="801 seconds"/>
+    <testSuite name="recovery" total="1" subTestsTotal="1" passed="1" subTestsPassed="1" failed="0" subTestsFailed="0" timeTaken="13 seconds"/>
+    <testSuite name="CPS_BUG" total="61" subTestsTotal="61" passed="40" subTestsPassed="40" failed="21" subTestsFailed="21" timeTaken="228 seconds"/>
+    <testSuite name="postTest" total="1" subTestsTotal="1" passed="1" subTestsPassed="1" failed="0" subTestsFailed="0" timeTaken="8 seconds"/>
+  </testSuites>
+  <testSuites groupName="admin">
+    <testSuite name="pre_search" total="1" subTestsTotal="1" passed="1" subTestsPassed="1" failed="0" subTestsFailed="0" timeTaken="140 seconds"/>
+    <testSuite name="pre_admin" total="1" subTestsTotal="1" passed="1" subTestsPassed="1" failed="0" subTestsFailed="0" timeTaken="1 seconds"/>
+    <testSuite name="1.1" total="47" subTestsTotal="47" passed="33" subTestsPassed="33" failed="14" subTestsFailed="14" timeTaken="833 seconds"/>
+    <testSuite name="commandline" total="21" subTestsTotal="21" passed="20" subTestsPassed="20" failed="1" subTestsFailed="1" timeTaken="321 seconds"/>
+    <testSuite name="tracingManagement" total="5" subTestsTotal="5" passed="5" subTestsPassed="5" failed="0" subTestsFailed="0" timeTaken="1 seconds"/>
+    <testSuite name="systemManagement" total="36" subTestsTotal="36" passed="36" subTestsPassed="36" failed="0" subTestsFailed="0" timeTaken="69 seconds"/>
+    <testSuite name="logManagement" total="20" subTestsTotal="29" passed="18" subTestsPassed="26" failed="2" subTestsFailed="3" timeTaken="989 seconds"/>
+    <testSuite name="cps" total="36" subTestsTotal="36" passed="34" subTestsPassed="34" failed="2" subTestsFailed="2" timeTaken="130 seconds"/>
+    <testSuite name="searchManagement" total="12" subTestsTotal="71" passed="7" subTestsPassed="58" failed="5" subTestsFailed="13" timeTaken="522 seconds"/>
+    <testSuite name="audit" total="11" subTestsTotal="12" passed="6" subTestsPassed="6" failed="5" subTestsFailed="6" timeTaken="68 seconds"/>
+    <testSuite name="thesaurus" total="1" subTestsTotal="30" passed="0" subTestsPassed="28" failed="1" subTestsFailed="2" timeTaken="431 seconds"/>
+    <testSuite name="dataManagement" total="119" subTestsTotal="254" passed="114" subTestsPassed="236" failed="5" subTestsFailed="18" timeTaken="6607 seconds"/>
+    <testSuite name="indexManagement" total="21" subTestsTotal="21" passed="19" subTestsPassed="19" failed="2" subTestsFailed="2" timeTaken="4026 seconds"/>
+    <testSuite name="bigData" total="4" subTestsTotal="4" passed="4" subTestsPassed="4" failed="0" subTestsFailed="0" timeTaken="8282 seconds"/>
+    <testSuite name="post_search" total="1" subTestsTotal="1" passed="1" subTestsPassed="1" failed="0" subTestsFailed="0" timeTaken="52 seconds"/>
+  </testSuites>
+  <summary total="2080" subTestsTotal="2349" passed="1930" subTestsPassed="2174" failed="150" subTestsFailed="175" timeTaken="48933 seconds"/>
+</summaryLog>
